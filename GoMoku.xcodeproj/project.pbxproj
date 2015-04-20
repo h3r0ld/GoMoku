@@ -13,6 +13,7 @@
 		72F623AC1AE517ED00CD1E45 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72F623AB1AE517ED00CD1E45 /* Images.xcassets */; };
 		72F623AF1AE517ED00CD1E45 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72F623AD1AE517ED00CD1E45 /* LaunchScreen.xib */; };
 		72F623BB1AE517ED00CD1E45 /* GoMokuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F623BA1AE517ED00CD1E45 /* GoMokuTests.swift */; };
+		72F623C51AE51BEB00CD1E45 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F623C41AE51BEB00CD1E45 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		72F623B41AE517ED00CD1E45 /* GoMokuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoMokuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		72F623B91AE517ED00CD1E45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72F623BA1AE517ED00CD1E45 /* GoMokuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoMokuTests.swift; sourceTree = "<group>"; };
+		72F623C41AE51BEB00CD1E45 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				72F623A41AE517ED00CD1E45 /* AppDelegate.swift */,
 				72F623A61AE517ED00CD1E45 /* ViewController.swift */,
 				72F623A81AE517ED00CD1E45 /* Main.storyboard */,
+				72F623C41AE51BEB00CD1E45 /* SettingsViewController.swift */,
 				72F623AB1AE517ED00CD1E45 /* Images.xcassets */,
 				72F623AD1AE517ED00CD1E45 /* LaunchScreen.xib */,
 				72F623A21AE517ED00CD1E45 /* Supporting Files */,
@@ -214,6 +217,7 @@
 			files = (
 				72F623A71AE517ED00CD1E45 /* ViewController.swift in Sources */,
 				72F623A51AE517ED00CD1E45 /* AppDelegate.swift in Sources */,
+				72F623C51AE51BEB00CD1E45 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +295,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -330,7 +334,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -343,6 +347,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GoMoku/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -353,6 +358,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GoMoku/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
