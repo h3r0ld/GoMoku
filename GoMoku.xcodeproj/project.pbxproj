@@ -1,0 +1,426 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		72F623A51AE517ED00CD1E45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F623A41AE517ED00CD1E45 /* AppDelegate.swift */; };
+		72F623A71AE517ED00CD1E45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F623A61AE517ED00CD1E45 /* ViewController.swift */; };
+		72F623AA1AE517ED00CD1E45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72F623A81AE517ED00CD1E45 /* Main.storyboard */; };
+		72F623AC1AE517ED00CD1E45 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72F623AB1AE517ED00CD1E45 /* Images.xcassets */; };
+		72F623AF1AE517ED00CD1E45 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72F623AD1AE517ED00CD1E45 /* LaunchScreen.xib */; };
+		72F623BB1AE517ED00CD1E45 /* GoMokuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F623BA1AE517ED00CD1E45 /* GoMokuTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		72F623B51AE517ED00CD1E45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 72F623971AE517ED00CD1E45 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 72F6239E1AE517ED00CD1E45;
+			remoteInfo = GoMoku;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		72F6239F1AE517ED00CD1E45 /* GoMoku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoMoku.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		72F623A31AE517ED00CD1E45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72F623A41AE517ED00CD1E45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		72F623A61AE517ED00CD1E45 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		72F623A91AE517ED00CD1E45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		72F623AB1AE517ED00CD1E45 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		72F623AE1AE517ED00CD1E45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		72F623B41AE517ED00CD1E45 /* GoMokuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoMokuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		72F623B91AE517ED00CD1E45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72F623BA1AE517ED00CD1E45 /* GoMokuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoMokuTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		72F6239C1AE517ED00CD1E45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72F623B11AE517ED00CD1E45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		72F623961AE517ED00CD1E45 = {
+			isa = PBXGroup;
+			children = (
+				72F623A11AE517ED00CD1E45 /* GoMoku */,
+				72F623B71AE517ED00CD1E45 /* GoMokuTests */,
+				72F623A01AE517ED00CD1E45 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		72F623A01AE517ED00CD1E45 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				72F6239F1AE517ED00CD1E45 /* GoMoku.app */,
+				72F623B41AE517ED00CD1E45 /* GoMokuTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		72F623A11AE517ED00CD1E45 /* GoMoku */ = {
+			isa = PBXGroup;
+			children = (
+				72F623A41AE517ED00CD1E45 /* AppDelegate.swift */,
+				72F623A61AE517ED00CD1E45 /* ViewController.swift */,
+				72F623A81AE517ED00CD1E45 /* Main.storyboard */,
+				72F623AB1AE517ED00CD1E45 /* Images.xcassets */,
+				72F623AD1AE517ED00CD1E45 /* LaunchScreen.xib */,
+				72F623A21AE517ED00CD1E45 /* Supporting Files */,
+			);
+			path = GoMoku;
+			sourceTree = "<group>";
+		};
+		72F623A21AE517ED00CD1E45 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				72F623A31AE517ED00CD1E45 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		72F623B71AE517ED00CD1E45 /* GoMokuTests */ = {
+			isa = PBXGroup;
+			children = (
+				72F623BA1AE517ED00CD1E45 /* GoMokuTests.swift */,
+				72F623B81AE517ED00CD1E45 /* Supporting Files */,
+			);
+			path = GoMokuTests;
+			sourceTree = "<group>";
+		};
+		72F623B81AE517ED00CD1E45 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				72F623B91AE517ED00CD1E45 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		72F6239E1AE517ED00CD1E45 /* GoMoku */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72F623BE1AE517ED00CD1E45 /* Build configuration list for PBXNativeTarget "GoMoku" */;
+			buildPhases = (
+				72F6239B1AE517ED00CD1E45 /* Sources */,
+				72F6239C1AE517ED00CD1E45 /* Frameworks */,
+				72F6239D1AE517ED00CD1E45 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GoMoku;
+			productName = GoMoku;
+			productReference = 72F6239F1AE517ED00CD1E45 /* GoMoku.app */;
+			productType = "com.apple.product-type.application";
+		};
+		72F623B31AE517ED00CD1E45 /* GoMokuTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72F623C11AE517ED00CD1E45 /* Build configuration list for PBXNativeTarget "GoMokuTests" */;
+			buildPhases = (
+				72F623B01AE517ED00CD1E45 /* Sources */,
+				72F623B11AE517ED00CD1E45 /* Frameworks */,
+				72F623B21AE517ED00CD1E45 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				72F623B61AE517ED00CD1E45 /* PBXTargetDependency */,
+			);
+			name = GoMokuTests;
+			productName = GoMokuTests;
+			productReference = 72F623B41AE517ED00CD1E45 /* GoMokuTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		72F623971AE517ED00CD1E45 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Herold Kristóf";
+				TargetAttributes = {
+					72F6239E1AE517ED00CD1E45 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					72F623B31AE517ED00CD1E45 = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = 72F6239E1AE517ED00CD1E45;
+					};
+				};
+			};
+			buildConfigurationList = 72F6239A1AE517ED00CD1E45 /* Build configuration list for PBXProject "GoMoku" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 72F623961AE517ED00CD1E45;
+			productRefGroup = 72F623A01AE517ED00CD1E45 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				72F6239E1AE517ED00CD1E45 /* GoMoku */,
+				72F623B31AE517ED00CD1E45 /* GoMokuTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		72F6239D1AE517ED00CD1E45 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72F623AA1AE517ED00CD1E45 /* Main.storyboard in Resources */,
+				72F623AF1AE517ED00CD1E45 /* LaunchScreen.xib in Resources */,
+				72F623AC1AE517ED00CD1E45 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72F623B21AE517ED00CD1E45 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		72F6239B1AE517ED00CD1E45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72F623A71AE517ED00CD1E45 /* ViewController.swift in Sources */,
+				72F623A51AE517ED00CD1E45 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72F623B01AE517ED00CD1E45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72F623BB1AE517ED00CD1E45 /* GoMokuTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		72F623B61AE517ED00CD1E45 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 72F6239E1AE517ED00CD1E45 /* GoMoku */;
+			targetProxy = 72F623B51AE517ED00CD1E45 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		72F623A81AE517ED00CD1E45 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				72F623A91AE517ED00CD1E45 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		72F623AD1AE517ED00CD1E45 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				72F623AE1AE517ED00CD1E45 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		72F623BC1AE517ED00CD1E45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		72F623BD1AE517ED00CD1E45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		72F623BF1AE517ED00CD1E45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GoMoku/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		72F623C01AE517ED00CD1E45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GoMoku/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		72F623C21AE517ED00CD1E45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GoMokuTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoMoku.app/GoMoku";
+			};
+			name = Debug;
+		};
+		72F623C31AE517ED00CD1E45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GoMokuTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoMoku.app/GoMoku";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		72F6239A1AE517ED00CD1E45 /* Build configuration list for PBXProject "GoMoku" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72F623BC1AE517ED00CD1E45 /* Debug */,
+				72F623BD1AE517ED00CD1E45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		72F623BE1AE517ED00CD1E45 /* Build configuration list for PBXNativeTarget "GoMoku" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72F623BF1AE517ED00CD1E45 /* Debug */,
+				72F623C01AE517ED00CD1E45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		72F623C11AE517ED00CD1E45 /* Build configuration list for PBXNativeTarget "GoMokuTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72F623C21AE517ED00CD1E45 /* Debug */,
+				72F623C31AE517ED00CD1E45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 72F623971AE517ED00CD1E45 /* Project object */;
+}
