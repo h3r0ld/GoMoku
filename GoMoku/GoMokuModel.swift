@@ -65,25 +65,30 @@ class GoMokuModel {
         return -1
     }
     
-    
-    func checkForWinDiagonalWithDirLR(sequenceSize: Int) -> Int {
+    // Checking the matrix if it has a "specified ammount" of
+    // numbers in a right->left directioned diagonal.
+    // @param: sequenceSize - the "specified ammount"
+    // @return: Returns the number, which can be found sequenceSize times in a diagonal with right->left direction (sequently)
+    func checkForWinDiagonalWithDirRL(sequenceSize: Int) -> Int {
         var sequenceCount = 0
         
-        for var i = 0; i < matrix.count; i++ {
+        // Iteration through the left and upper bordered cells (first row and first column)
+        for var i = 0; i < matrix.count - 1; i++ {
             
             if (i == 0) {
-                
-                for var j = 0; j < matrix.count; j++ {
+                // Iterating through first row
+                for var j = 0; j < matrix.count - 1; j++ {
                     var y = j;
-                    for var x = i; x < matrix.count - j; x++ {
-                        //                        myGoMoku.setMatrixAtIdx(XCoord: x, YCoord: y, Value: 1)
+                    
+                    // At each cell, we check the diagonal if it has a sequence, which starts with the cell
+                    for var x = i; x < matrix[i].count - j; x++ {
+
+                        
                         if matrix[x][y] != 0 && matrix[x][y] == matrix[x+1][y+1] {
-                            println("UT: \(x) , \(y)")
                             sequenceCount++
                             if sequenceCount == sequenceSize - 1 {
                                 return matrix[x][y]
                             }
-                            println("\(sequenceCount)")
                         } else {
                             sequenceCount = 0
                         }
@@ -91,12 +96,13 @@ class GoMokuModel {
                     }
                 }
             } else {
+                // Iterating the first column
                 var y = 0
+                
+                // At each cell, we check the diagonal if it has a sequence, which starts with the cell
                 for var x = i; x < matrix.count; x++ {
-                    //                    myGoMoku.setMatrixAtIdx(XCoord: x, YCoord: y, Value: 1)
                     
                     if matrix[x][y] != 0 && matrix[x][y] == matrix[x+1][y+1] {
-                        //                        println("UT: \(x) , \(y)")
                         sequenceCount++
                         if sequenceCount == sequenceSize - 1 {
                             return matrix[x][y]
@@ -115,8 +121,54 @@ class GoMokuModel {
         return -1
     }
 
-    
-    func checkForWinDiagonalWithDirRL(sequenceSize: Int) -> Int {
+    // Checking the matrix if it has a "specified ammount" of
+    // numbers in a right->left directioned diagonal.
+    // @param: sequenceSize - the "specified ammount"
+    // @return: Returns the number, which can be found sequenceSize times in a diagonal with left->right direction (sequently)
+    func checkForWinDiagonalWithDirLR(sequenceSize: Int) -> Int {
+        var sequenceCount = 0
+        
+        // Iteration through the left and lower border cells (last row and first column)
+        for var i = 0; i < matrix.count; i++ {
+            
+            // If in the last row
+            if i == matrix.count - 1 {
+                
+                //Iterating through the last row
+                for var j = 0; j < matrix[i].count; j++ {
+                    
+                    var y = j
+                    // At each cell, we check the diagonal if it has a sequence, which starts with the cell
+                    for var x = i; x > j; x-- {
+                        if (matrix[x][y] != 0 && matrix[x][y] == matrix[x-1][y+1]) {
+                            sequenceCount++
+                            
+                            if sequenceCount == sequenceSize - 1 {
+                                return matrix[x][y]
+                            }
+                        } else {
+                            sequenceCount = 0
+                        }
+                        y++
+                    }
+                }
+            } else {
+                //Iterating the first column
+                var y = 0
+                // At each cell, we check the diagonal if it has a sequence, which starts with the cell
+                for var x = i; x > 0; x-- {
+                    if (matrix[x][y] != 0 && matrix[x][y] == matrix[x-1][y+1]) {
+                        sequenceCount++
+                        if sequenceCount == sequenceSize - 1 {
+                            return matrix[x][y]
+                        }
+                    } else {
+                        sequenceCount = 0
+                    }
+                    y++
+                }
+            }
+        }
         return -1
     }
     
