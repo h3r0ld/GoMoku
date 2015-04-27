@@ -9,7 +9,9 @@
 import Foundation
 
 class GoMokuModel {
+    
     var matrix: [[Int]]
+    var winSequence = 0
     
     init (size: Int) {
         matrix = Array(count: size, repeatedValue: Array(count: size, repeatedValue: 0))
@@ -17,6 +19,19 @@ class GoMokuModel {
     
     func getMatrixAtIdx(XCoord x: Int,YCoord y:Int) -> Int {
         return matrix[x][y]
+    }
+    
+    func setWinSequenceNeeded(sequenceLength: Int) {
+        self.winSequence = sequenceLength
+    }
+    
+    subscript(row: Int, column: Int) -> Int {
+        get {
+            return matrix[row][column]
+        }
+        set {
+            matrix[row][column] = newValue
+        }
     }
     
     func setMatrixAtIdx(XCoord x: Int,YCoord y:Int, Value value: Int) {

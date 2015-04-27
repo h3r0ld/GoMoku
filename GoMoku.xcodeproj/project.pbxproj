@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7202EB881AE5229900CF9AF5 /* GoMokuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7202EB871AE5229900CF9AF5 /* GoMokuModel.swift */; };
+		725E96611AEE8C620084BD55 /* GoMokuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725E96601AEE8C620084BD55 /* GoMokuView.swift */; };
 		72F623A51AE517ED00CD1E45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F623A41AE517ED00CD1E45 /* AppDelegate.swift */; };
 		72F623A71AE517ED00CD1E45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F623A61AE517ED00CD1E45 /* ViewController.swift */; };
 		72F623AA1AE517ED00CD1E45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72F623A81AE517ED00CD1E45 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		7202EB871AE5229900CF9AF5 /* GoMokuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoMokuModel.swift; sourceTree = "<group>"; };
+		725E96601AEE8C620084BD55 /* GoMokuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoMokuView.swift; sourceTree = "<group>"; };
 		72F6239F1AE517ED00CD1E45 /* GoMoku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoMoku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72F623A31AE517ED00CD1E45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72F623A41AE517ED00CD1E45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				7202EB871AE5229900CF9AF5 /* GoMokuModel.swift */,
 				72F623A81AE517ED00CD1E45 /* Main.storyboard */,
 				72F623C41AE51BEB00CD1E45 /* SettingsViewController.swift */,
+				725E96601AEE8C620084BD55 /* GoMokuView.swift */,
 				72F623AB1AE517ED00CD1E45 /* Images.xcassets */,
 				72F623AD1AE517ED00CD1E45 /* LaunchScreen.xib */,
 				72F623A21AE517ED00CD1E45 /* Supporting Files */,
@@ -219,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72F623A71AE517ED00CD1E45 /* ViewController.swift in Sources */,
+				725E96611AEE8C620084BD55 /* GoMokuView.swift in Sources */,
 				72F623A51AE517ED00CD1E45 /* AppDelegate.swift in Sources */,
 				72F623C51AE51BEB00CD1E45 /* SettingsViewController.swift in Sources */,
 				7202EB881AE5229900CF9AF5 /* GoMokuModel.swift in Sources */,
