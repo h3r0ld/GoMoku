@@ -12,6 +12,11 @@ class GoMokuModel {
     
     var matrix: [[Int]]
     var winSequence = 0
+    var Size: Int{
+        get {
+                return matrix.count
+        }
+    }
     
     init (size: Int) {
         matrix = Array(count: size, repeatedValue: Array(count: size, repeatedValue: 0))

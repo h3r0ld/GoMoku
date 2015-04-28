@@ -82,10 +82,10 @@
             </objects>
             <point key="canvasLocation" x="1297" y="377"/>
         </scene>
-        <!--View Controller-->
+        <!--Game Menu View Controller-->
         <scene sceneID="49j-83-kub">
             <objects>
-                <viewController id="KCt-W9-6C5" sceneMemberID="viewController">
+                <viewController id="KCt-W9-6C5" customClass="GameMenuViewController" customModule="GoMoku" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QW1-WP-1iR"/>
                         <viewControllerLayoutGuide type="bottom" id="Qdf-sw-Cbj"/>
@@ -106,8 +106,8 @@
                                     <segue destination="87V-p5-ZM2" kind="show" id="XFu-IN-dZK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QqR-eW-fnb">
-                                <rect key="frame" x="0.0" y="64" width="600" height="236"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QqR-eW-fnb">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
                                 <color key="backgroundColor" red="0.39544449608998689" green="0.69711220662507434" blue="0.11887371825346975" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="New Game">
@@ -115,7 +115,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ZBs-DR-ByX" kind="show" id="uzl-xg-C6y"/>
+                                    <segue destination="ZBs-DR-ByX" kind="show" identifier="NewGameSegue" id="uzl-xg-C6y"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -142,10 +142,10 @@
             </objects>
             <point key="canvasLocation" x="2014" y="241"/>
         </scene>
-        <!--View Controller-->
+        <!--New Game View Controller-->
         <scene sceneID="dtV-vq-c6Z">
             <objects>
-                <viewController id="ZBs-DR-ByX" sceneMemberID="viewController">
+                <viewController id="ZBs-DR-ByX" customClass="NewGameViewController" customModule="GoMoku" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xIj-Fv-OVh"/>
                         <viewControllerLayoutGuide type="bottom" id="Ah2-PA-yA1"/>
@@ -172,8 +172,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rih-EI-3iq">
-                                <rect key="frame" x="0.0" y="64" width="600" height="236"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rih-EI-3iq">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
                                 <color key="backgroundColor" red="0.29019607843137257" green="0.56470588235294117" blue="0.082352941176470587" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="Host Game">
@@ -238,7 +238,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="6" minValue="3" maxValue="15" translatesAutoresizingMaskIntoConstraints="NO" id="Vye-qu-XgY">
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="3" maxValue="15" translatesAutoresizingMaskIntoConstraints="NO" id="Vye-qu-XgY">
                                 <rect key="frame" x="92" y="152" width="212" height="31"/>
                                 <color key="tintColor" red="0.308765991031617" green="0.68189222185086162" blue="0.075058298938654552" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -269,6 +269,7 @@
                     <connections>
                         <outlet property="mapSizeLabel" destination="CmZ-20-jon" id="dDA-ju-1hV"/>
                         <outlet property="mapSizeSlider" destination="Vye-qu-XgY" id="el6-pI-nNK"/>
+                        <outlet property="winSequenceSegmentedControl" destination="klO-s0-eqE" id="xyZ-UT-I0Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbb-I0-qDr" userLabel="First Responder" sceneMemberID="firstResponder"/>

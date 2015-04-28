@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7202EB881AE5229900CF9AF5 /* GoMokuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7202EB871AE5229900CF9AF5 /* GoMokuModel.swift */; };
+		72259F691AEF792000DE59C0 /* NewGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72259F681AEF791F00DE59C0 /* NewGameViewController.swift */; };
+		72259F6B1AEF817100DE59C0 /* GameMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72259F6A1AEF817100DE59C0 /* GameMenuViewController.swift */; };
 		725E96611AEE8C620084BD55 /* GoMokuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725E96601AEE8C620084BD55 /* GoMokuView.swift */; };
 		72F623A51AE517ED00CD1E45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F623A41AE517ED00CD1E45 /* AppDelegate.swift */; };
 		72F623A71AE517ED00CD1E45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F623A61AE517ED00CD1E45 /* ViewController.swift */; };
@@ -30,6 +32,8 @@
 
 /* Begin PBXFileReference section */
 		7202EB871AE5229900CF9AF5 /* GoMokuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoMokuModel.swift; sourceTree = "<group>"; };
+		72259F681AEF791F00DE59C0 /* NewGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGameViewController.swift; sourceTree = "<group>"; };
+		72259F6A1AEF817100DE59C0 /* GameMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameMenuViewController.swift; sourceTree = "<group>"; };
 		725E96601AEE8C620084BD55 /* GoMokuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoMokuView.swift; sourceTree = "<group>"; };
 		72F6239F1AE517ED00CD1E45 /* GoMoku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoMoku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72F623A31AE517ED00CD1E45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -87,6 +91,8 @@
 				72F623A61AE517ED00CD1E45 /* ViewController.swift */,
 				7202EB871AE5229900CF9AF5 /* GoMokuModel.swift */,
 				72F623A81AE517ED00CD1E45 /* Main.storyboard */,
+				72259F6A1AEF817100DE59C0 /* GameMenuViewController.swift */,
+				72259F681AEF791F00DE59C0 /* NewGameViewController.swift */,
 				72F623C41AE51BEB00CD1E45 /* SettingsViewController.swift */,
 				725E96601AEE8C620084BD55 /* GoMokuView.swift */,
 				72F623AB1AE517ED00CD1E45 /* Images.xcassets */,
@@ -221,11 +227,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72259F6B1AEF817100DE59C0 /* GameMenuViewController.swift in Sources */,
 				72F623A71AE517ED00CD1E45 /* ViewController.swift in Sources */,
 				725E96611AEE8C620084BD55 /* GoMokuView.swift in Sources */,
 				72F623A51AE517ED00CD1E45 /* AppDelegate.swift in Sources */,
 				72F623C51AE51BEB00CD1E45 /* SettingsViewController.swift in Sources */,
 				7202EB881AE5229900CF9AF5 /* GoMokuModel.swift in Sources */,
+				72259F691AEF792000DE59C0 /* NewGameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
