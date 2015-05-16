@@ -7,8 +7,27 @@
 //
 
 import UIKit
+import GameKit
 
-class MultiplayerViewController: UIViewController {
+class MultiplayerViewController: UIViewController, GKTurnBasedMatchmakerViewControllerDelegate {
+    
+    
+    func turnBasedMatchmakerViewController(viewController: GKTurnBasedMatchmakerViewController!, didFailWithError error: NSError!) {
+        
+    }
+    
+    func turnBasedMatchmakerViewController(viewController: GKTurnBasedMatchmakerViewController!, didFindMatch match: GKTurnBasedMatch!) {
+        
+    }
+    
+    func turnBasedMatchmakerViewController(viewController: GKTurnBasedMatchmakerViewController!, playerQuitForMatch match: GKTurnBasedMatch!) {
+        
+    }
+    
+    func turnBasedMatchmakerViewControllerWasCancelled(viewController: GKTurnBasedMatchmakerViewController!) {
+        
+    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +40,16 @@ class MultiplayerViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func joinGameAction(sender: AnyObject) {
+        var request = GKMatchRequest()
+        request.minPlayers = 2
+        request.maxPlayers = 2
+        
+        let vc = GKTurnBasedMatchmakerViewController(matchRequest: request)
+        vc.turnBasedMatchmakerDelegate = self
+        
+        presentViewController(vc, animated: true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation

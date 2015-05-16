@@ -13,17 +13,17 @@ class NewGameViewController: UIViewController {
     var goMokuViews: [[GoMokuView]] = []
     var goMokuMatrix: [[Int]] = []
     var goMokuModel: GoMokuModel?
-    var rectSize: Int = 20
+    var rectSize: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         goMokuModel = AppDelegate.sharedAppDelegate().myGoMoKuModel
-        goMokuMatrix = AppDelegate.sharedAppDelegate().myGoMoKuModel.matrix
+        goMokuMatrix = AppDelegate.sharedAppDelegate().myGoMoKuModel!.matrix
         
         goMokuViews = Array(count: goMokuMatrix.count, repeatedValue: Array(count: goMokuMatrix[0].count, repeatedValue: GoMokuView()))
         
+        rectSize = Int(UIScreen.mainScreen().bounds.width / CGFloat(goMokuModel!.Size))
         buildUpView()
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,7 +33,7 @@ class NewGameViewController: UIViewController {
     func buildUpView() {
         for var i = 0; i < goMokuMatrix.count; i++ {
             for var j = 0; j < goMokuMatrix[i].count; j++ {
-                goMokuViews[i][j] = GoMokuView(frame: CGRect(x: 100 + i + i * rectSize, y: 100 + j + j * rectSize, width: rectSize, height: rectSize))
+                goMokuViews[i][j] = GoMokuView(frame: CGRect(x: i + i * rectSize, y: j + j * rectSize, width: rectSize, height: rectSize))
                 goMokuViews[i][j].idx = i
                 goMokuViews[i][j].idy = j
                 goMokuViews[i][j].backgroundColor = UIColor.redColor()
@@ -41,9 +41,6 @@ class NewGameViewController: UIViewController {
                 self.view.addSubview(goMokuViews[i][j])
             }
         }
-        
-
-        
     }
     
     func updateView() {
@@ -56,7 +53,7 @@ class NewGameViewController: UIViewController {
         }
         
         goMokuModel = AppDelegate.sharedAppDelegate().myGoMoKuModel
-        goMokuMatrix = AppDelegate.sharedAppDelegate().myGoMoKuModel.matrix
+        goMokuMatrix = AppDelegate.sharedAppDelegate().myGoMoKuModel!.matrix
         
         buildUpView()
     }

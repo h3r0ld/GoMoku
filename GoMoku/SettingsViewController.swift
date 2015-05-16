@@ -10,11 +10,10 @@ import UIKit
 import Foundation
 
 class SettingsViewController: UIViewController {
+    @IBOutlet weak var mapSizeVC: MapSizeViewController!
+    @IBOutlet weak var winSeqVC: WinSequenceViewController!
     
-    @IBOutlet weak var mapSizeLabel: UILabel!
-    @IBOutlet weak var mapSizeSlider: UISlider!
-    @IBOutlet weak var winSequenceSegmentedControl: UISegmentedControl!
-    
+    WEAK
 
     //Computer property for the Slider's rounded Int value
     var mapSizeSliderValue: Int{

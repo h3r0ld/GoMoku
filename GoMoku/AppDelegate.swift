@@ -12,10 +12,10 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var myGoMoKuModel = GoMokuModel(size: 3)
+    var myGoMoKuModel: GoMokuModel?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch
+        myGoMoKuModel = GoMokuModel(size: 3)
         return true
     }
 

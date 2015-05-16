@@ -7,3 +7,35 @@
 //
 
 import Foundation
+import GameKit
+
+class GKNetworking: GKTurnBasedMatch, GKTurnBasedMatchmakerViewControllerDelegate {
+    
+    
+    func joinMatch(sender: AnyObject) {
+        var request = GKMatchRequest()
+        request.minPlayers = 2
+        request.maxPlayers = 2
+        
+        let vc = GKTurnBasedMatchmakerViewController(matchRequest: request)
+        vc.turnBasedMatchmakerDelegate = self
+        
+        vc.presentViewController(vc, animated: true, completion: nil)
+    }
+    
+    func turnBasedMatchmakerViewController(viewController: GKTurnBasedMatchmakerViewController!, didFailWithError error: NSError!) {
+        
+    }
+    
+    func turnBasedMatchmakerViewController(viewController: GKTurnBasedMatchmakerViewController!, didFindMatch match: GKTurnBasedMatch!) {
+        
+    }
+    
+    func turnBasedMatchmakerViewController(viewController: GKTurnBasedMatchmakerViewController!, playerQuitForMatch match: GKTurnBasedMatch!) {
+        
+    }
+    
+    func turnBasedMatchmakerViewControllerWasCancelled(viewController: GKTurnBasedMatchmakerViewController!) {
+        
+    }
+}

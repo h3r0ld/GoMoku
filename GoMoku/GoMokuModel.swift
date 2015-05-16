@@ -11,7 +11,8 @@ import Foundation
 class GoMokuModel {
     
     var matrix: [[Int]]
-    var winSequence = 0
+    var winSequence = 3
+    
     var Size: Int{
         get {
                 return matrix.count
@@ -192,6 +193,8 @@ class GoMokuModel {
         return -1
     }
     
+    
+    //For Logging
     func printMatrix() {
         for i in 0..<matrix.count {
             for j in 0...matrix[i].count-1 {

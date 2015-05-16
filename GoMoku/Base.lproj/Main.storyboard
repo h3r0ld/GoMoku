@@ -6,10 +6,10 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--MainMenu-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GoMoku" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="MainMenu" id="BYZ-38-t0r" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -21,8 +21,8 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kpP-3D-pbe">
                                 <rect key="frame" x="0.0" y="300" width="600" height="300"/>
                                 <color key="backgroundColor" red="0.308765991031617" green="0.68189222185086162" blue="0.075058298938654552" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
-                                <state key="normal" title="Settings">
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="70"/>
+                                <state key="normal" title="settings">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -33,8 +33,8 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ye8-mH-cMt">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
                                 <color key="backgroundColor" red="0.39548433545706807" green="0.77347045825906124" blue="0.10361486919226411" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
-                                <state key="normal" title="Play">
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="70"/>
+                                <state key="normal" title="play">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -97,7 +97,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8S6-Hi-ka5">
                                 <rect key="frame" x="0.0" y="300" width="600" height="300"/>
                                 <color key="backgroundColor" red="0.35100413496799565" green="0.61877019273618539" blue="0.10551459701311271" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
                                 <state key="normal" title="Online Multiplayer">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -109,7 +109,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QqR-eW-fnb">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
                                 <color key="backgroundColor" red="0.39544449608998689" green="0.69711220662507434" blue="0.11887371825346975" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
                                 <state key="normal" title="New Game">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -160,10 +160,10 @@
             </objects>
             <point key="canvasLocation" x="2731" y="32"/>
         </scene>
-        <!--View Controller-->
+        <!--Multiplayer View Controller-->
         <scene sceneID="F48-Oi-5BX">
             <objects>
-                <viewController id="87V-p5-ZM2" sceneMemberID="viewController">
+                <viewController id="87V-p5-ZM2" customClass="MultiplayerViewController" customModule="GoMoku" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="trr-f7-zHz"/>
                         <viewControllerLayoutGuide type="bottom" id="dTu-4i-Oxi"/>
@@ -175,17 +175,29 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rih-EI-3iq">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
                                 <color key="backgroundColor" red="0.29019607843137257" green="0.56470588235294117" blue="0.082352941176470587" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
                                 <state key="normal" title="Host Game">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="joinGameAction:" destination="87V-p5-ZM2" eventType="touchUpInside" id="Xxw-yu-yhc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="muv-Vd-OG9">
                                 <rect key="frame" x="0.0" y="300" width="600" height="300"/>
                                 <color key="backgroundColor" red="0.26087528983638575" green="0.50542163361556747" blue="0.072602550263775073" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
                                 <state key="normal" title="Join Game">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Mr-eQ-VuQ">
+                                <rect key="frame" x="0.0" y="0.0" width="199" height="60"/>
+                                <color key="backgroundColor" red="0.2901960784" green="0.56470588239999997" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="Host Game">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -214,10 +226,10 @@
             </objects>
             <point key="canvasLocation" x="2731" y="701"/>
         </scene>
-        <!--Settings View Controller-->
+        <!--View Controller-->
         <scene sceneID="xHm-Hz-cGZ">
             <objects>
-                <viewController id="Qu7-9t-9EC" customClass="SettingsViewController" customModule="GoMoku" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Qu7-9t-9EC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qUH-7a-Ezi"/>
                         <viewControllerLayoutGuide type="bottom" id="QLj-XU-h8u"/>
@@ -226,51 +238,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Win sequence length:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5uH-pQ-ndo">
-                                <rect key="frame" x="16" y="193" width="166" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Map Size:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6i-4d-FXR">
-                                <rect key="frame" x="16" y="156" width="77" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="3" maxValue="15" translatesAutoresizingMaskIntoConstraints="NO" id="Vye-qu-XgY">
-                                <rect key="frame" x="92" y="152" width="212" height="31"/>
-                                <color key="tintColor" red="0.308765991031617" green="0.68189222185086162" blue="0.075058298938654552" alpha="1" colorSpace="calibratedRGB"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xLB-Rp-kl6">
+                                <rect key="frame" x="0.0" y="300" width="600" height="300"/>
+                                <color key="backgroundColor" red="0.25882352941176473" green="0.63529411764705879" blue="0.066666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <action selector="mapSizeSliderValueChanged:" destination="Qu7-9t-9EC" eventType="valueChanged" id="df3-Zu-FAq"/>
+                                    <segue destination="4jd-h4-BiB" kind="embed" id="CtN-Zg-Xh3"/>
                                 </connections>
-                            </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CmZ-20-jon">
-                                <rect key="frame" x="317" y="156" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="klO-s0-eqE">
-                                <rect key="frame" x="199" y="190" width="152" height="29"/>
-                                <segments>
-                                    <segment title="3"/>
-                                    <segment title="4"/>
-                                    <segment title="5"/>
-                                </segments>
-                                <color key="tintColor" red="0.308765991031617" green="0.68189222185086162" blue="0.075058298938654552" alpha="1" colorSpace="calibratedRGB"/>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jDd-HY-OCN">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                                <color key="backgroundColor" red="0.33725490196078434" green="0.74117647058823533" blue="0.082352941176470587" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <action selector="winSequenceSegmentedControlValueChanged:" destination="Qu7-9t-9EC" eventType="valueChanged" id="Q5w-sW-mqg"/>
+                                    <segue destination="CPh-1J-rRt" kind="embed" id="7cs-2o-Wyb"/>
                                 </connections>
-                            </segmentedControl>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" red="0.50657766694568029" green="1" blue="0.41658878012093581" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="xLB-Rp-kl6" secondAttribute="trailing" id="3EP-zP-ltu"/>
+                            <constraint firstItem="jDd-HY-OCN" firstAttribute="top" secondItem="cqK-WD-A95" secondAttribute="top" id="4WB-ft-QlW"/>
+                            <constraint firstItem="QLj-XU-h8u" firstAttribute="top" secondItem="xLB-Rp-kl6" secondAttribute="bottom" id="Smv-UB-pW1"/>
+                            <constraint firstAttribute="trailing" secondItem="jDd-HY-OCN" secondAttribute="trailing" id="WRA-bQ-rd4"/>
+                            <constraint firstItem="jDd-HY-OCN" firstAttribute="height" secondItem="cqK-WD-A95" secondAttribute="height" multiplier="0.5" id="axJ-Pv-XDp"/>
+                            <constraint firstItem="xLB-Rp-kl6" firstAttribute="top" secondItem="jDd-HY-OCN" secondAttribute="bottom" id="eNw-X8-6UJ"/>
+                            <constraint firstItem="xLB-Rp-kl6" firstAttribute="leading" secondItem="cqK-WD-A95" secondAttribute="leading" id="fQF-Mc-7B8"/>
+                            <constraint firstItem="xLB-Rp-kl6" firstAttribute="top" secondItem="jDd-HY-OCN" secondAttribute="bottom" id="kMh-fl-f0c"/>
+                            <constraint firstItem="jDd-HY-OCN" firstAttribute="leading" secondItem="cqK-WD-A95" secondAttribute="leading" id="t9o-Oj-0Ng"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="eNw-X8-6UJ"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <connections>
-                        <outlet property="mapSizeLabel" destination="CmZ-20-jon" id="dDA-ju-1hV"/>
-                        <outlet property="mapSizeSlider" destination="Vye-qu-XgY" id="el6-pI-nNK"/>
-                        <outlet property="winSequenceSegmentedControl" destination="klO-s0-eqE" id="xyZ-UT-I0Z"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbb-I0-qDr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -293,6 +293,133 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gSo-k5-pV6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="442" y="377"/>
+        </scene>
+        <!--Map Size View Controller-->
+        <scene sceneID="i0o-br-gXq">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="CPh-1J-rRt" customClass="MapSizeViewController" customModule="GoMoku" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bSA-cH-oEt"/>
+                        <viewControllerLayoutGuide type="bottom" id="bXi-G8-q1G"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="pmu-4a-Vy2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Map Size:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6i-4d-FXR">
+                                <rect key="frame" x="16" y="107" width="300" height="36"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="16" y="101" width="200" height="48"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CmZ-20-jon">
+                                <rect key="frame" x="300" y="107" width="300" height="36"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="200" y="101" width="200" height="48"/>
+                                </variation>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="3" maxValue="15" translatesAutoresizingMaskIntoConstraints="NO" id="Vye-qu-XgY">
+                                <rect key="frame" x="14" y="160" width="572" height="31"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="mapSizeSliderValueChanged:" destination="Qu7-9t-9EC" eventType="valueChanged" id="df3-Zu-FAq"/>
+                                    <action selector="mapSizeSliderValueChanged:" destination="CPh-1J-rRt" eventType="valueChanged" id="mKW-9D-lD2"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" red="0.33725490196078434" green="0.74117647058823533" blue="0.082352941176470587" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Vye-qu-XgY" secondAttribute="trailing" id="9Uq-ep-Fir"/>
+                            <constraint firstItem="L6i-4d-FXR" firstAttribute="leading" secondItem="pmu-4a-Vy2" secondAttribute="leadingMargin" id="BgX-2B-DEy"/>
+                            <constraint firstItem="L6i-4d-FXR" firstAttribute="width" secondItem="pmu-4a-Vy2" secondAttribute="width" multiplier="0.5" id="DyJ-Ir-FLb"/>
+                            <constraint firstAttribute="centerY" secondItem="Vye-qu-XgY" secondAttribute="centerY" constant="-25" id="G7U-Py-awz"/>
+                            <constraint firstAttribute="width" secondItem="CmZ-20-jon" secondAttribute="width" multiplier="2" id="Pwj-js-RqY"/>
+                            <constraint firstItem="CmZ-20-jon" firstAttribute="leading" secondItem="L6i-4d-FXR" secondAttribute="trailing" id="eC0-9N-EJ3"/>
+                            <constraint firstAttribute="width" secondItem="Vye-qu-XgY" secondAttribute="width" id="h1D-GY-7ID"/>
+                            <constraint firstAttribute="trailing" secondItem="CmZ-20-jon" secondAttribute="trailing" id="rfx-US-ECY"/>
+                            <constraint firstItem="Vye-qu-XgY" firstAttribute="leading" secondItem="pmu-4a-Vy2" secondAttribute="leadingMargin" id="vNK-m8-L6T"/>
+                            <constraint firstAttribute="centerY" secondItem="CmZ-20-jon" secondAttribute="centerY" constant="25" id="yFK-AG-y1D"/>
+                            <constraint firstAttribute="centerY" secondItem="L6i-4d-FXR" secondAttribute="centerY" constant="25" id="yqr-kz-yQO"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="h1D-GY-7ID"/>
+                                <exclude reference="eC0-9N-EJ3"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <toolbarItems/>
+                    <connections>
+                        <outlet property="mapSizeLabel" destination="CmZ-20-jon" id="P2t-nW-T2r"/>
+                        <outlet property="mapSizeSlider" destination="Vye-qu-XgY" id="fBI-UN-6TW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kwb-em-WJ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2657" y="1244"/>
+        </scene>
+        <!--Win Sequence View Controller-->
+        <scene sceneID="ie9-pY-Zqg">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="4jd-h4-BiB" customClass="WinSequenceViewController" customModule="GoMoku" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9CL-dz-jUJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="qWD-F6-3o5"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="hdC-zs-Wha">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Win Sequence Length" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5uH-pQ-ndo">
+                                <rect key="frame" x="161" y="107" width="279" height="36"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="14" y="101" width="372" height="48"/>
+                                </variation>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="klO-s0-eqE">
+                                <rect key="frame" x="161" y="161" width="279" height="29"/>
+                                <segments>
+                                    <segment title="3"/>
+                                    <segment title="4"/>
+                                    <segment title="5"/>
+                                </segments>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="14" y="161" width="372" height="29"/>
+                                </variation>
+                                <connections>
+                                    <action selector="winSeqSegCtrlValueChanged:" destination="4jd-h4-BiB" eventType="valueChanged" id="vTZ-2d-Fju"/>
+                                    <action selector="winSequenceSegmentedControlValueChanged:" destination="Qu7-9t-9EC" eventType="valueChanged" id="Q5w-sW-mqg"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="0.25882352941176473" green="0.63529411764705879" blue="0.066666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="5uH-pQ-ndo" secondAttribute="centerY" constant="25" id="0xI-te-jaB"/>
+                            <constraint firstAttribute="centerX" secondItem="klO-s0-eqE" secondAttribute="centerX" id="SVL-Gw-tKE"/>
+                            <constraint firstAttribute="centerX" secondItem="5uH-pQ-ndo" secondAttribute="centerX" id="jAH-ZI-i6z"/>
+                            <constraint firstItem="5uH-pQ-ndo" firstAttribute="width" secondItem="klO-s0-eqE" secondAttribute="width" id="k5R-N6-8SM"/>
+                            <constraint firstAttribute="centerY" secondItem="klO-s0-eqE" secondAttribute="centerY" constant="-25" id="q6z-Kb-LKm"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <connections>
+                        <outlet property="winSequenceSegCtrl" destination="klO-s0-eqE" id="pXf-hN-QJj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nnT-Aa-Fvc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1961" y="1534"/>
         </scene>
     </scenes>
 </document>

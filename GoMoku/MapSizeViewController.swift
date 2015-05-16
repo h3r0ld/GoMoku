@@ -9,18 +9,28 @@
 import UIKit
 
 class MapSizeViewController: UIViewController {
+    @IBOutlet weak var mapSizeSlider: UISlider!
+    @IBOutlet weak var mapSizeLabel: UILabel!
+    
+    var mapSizeSliderValue: Int{
+        get {
+            return Int(mapSizeSlider.value)
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        mapSizeLabel.text = "\(mapSizeSliderValue)"
+        AppDelegate.sharedAppDelegate().myGoMoKuModel = GoMokuModel(size: mapSizeSliderValue)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func mapSizeSliderValueChanged(sender: AnyObject) {
+        mapSizeLabel.text = "\(mapSizeSliderValue)"
+    }
 
     /*
     // MARK: - Navigation
