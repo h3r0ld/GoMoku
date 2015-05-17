@@ -13,16 +13,21 @@ class NewGameViewController: UIViewController {
     var goMokuViews: [[GoMokuView]] = []
     var goMokuMatrix: [[Int]] = []
     var goMokuModel: GoMokuModel?
-    var rectSize: Int = 0
+    var rectSize: CGFloat = 0
+    
+    var player1isComing = true
+    
+    @IBOutlet weak var goMokuScene: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         goMokuModel = AppDelegate.sharedAppDelegate().myGoMoKuModel
         goMokuMatrix = AppDelegate.sharedAppDelegate().myGoMoKuModel!.matrix
-        
+        goMokuModel!.resetMatrixValuesToNull()
         goMokuViews = Array(count: goMokuMatrix.count, repeatedValue: Array(count: goMokuMatrix[0].count, repeatedValue: GoMokuView()))
         
-        rectSize = Int(UIScreen.mainScreen().bounds.width / CGFloat(goMokuModel!.Size))
+        rectSize = (UIScreen.mainScreen().bounds.width / CGFloat(goMokuModel!.Size)) - 1
         buildUpView()
     }
 
@@ -33,21 +38,51 @@ class NewGameViewController: UIViewController {
     func buildUpView() {
         for var i = 0; i < goMokuMatrix.count; i++ {
             for var j = 0; j < goMokuMatrix[i].count; j++ {
-                goMokuViews[i][j] = GoMokuView(frame: CGRect(x: i + i * rectSize, y: j + j * rectSize, width: rectSize, height: rectSize))
-                goMokuViews[i][j].idx = i
-                goMokuViews[i][j].idy = j
-                goMokuViews[i][j].backgroundColor = UIColor.redColor()
+                var CGi = CGFloat(i)
+                var CGj = CGFloat(j)
+        
+                goMokuViews[i][j] = GoMokuView(frame: CGRect(x:  CGj + CGj * rectSize, y: CGi + CGi * rectSize, width: rectSize, height: rectSize))
+                
                 var view = goMokuViews[i][j]
-                self.view.addSubview(goMokuViews[i][j])
+                view.idx = i
+                view.idy = j
+                view.backgroundColor = UIColor(red: 0.1, green: 0.4, blue: 0.9, alpha: 0.8)
+
+                view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "cellTapped:"))
+                goMokuScene.addSubview(view)
+                
             }
         }
     }
     
-    func updateView() {
-
+    func cellTapped(sender: UITapGestureRecognizer) {
+        
+        let tappedView = sender.view as! GoMokuView
+        
+        if player1isComing {
+            goMokuModel?.setMatrixAtIdx(XCoord: tappedView.idx, YCoord: tappedView.idy, Value: 1)
+            tappedView.backgroundColor = UIColor.redColor()
+            player1isComing = false
+            if goMokuModel?.checkMatrixForWin(3) == 1 {
+                println("Player 1 won the game.")
+            }
+            goMokuModel?.printMatrix()
+            println()
+        } else {
+            goMokuModel?.setMatrixAtIdx(XCoord: tappedView.idx, YCoord: tappedView.idy, Value: 2)
+            tappedView.backgroundColor = UIColor.greenColor()
+            player1isComing = true
+            if goMokuModel?.checkMatrixForWin(3) == 2 {
+                println("Player 2 won the game.")
+            }
+            goMokuModel?.printMatrix()
+            println()
+        }
+        
+        
     }
     
-    func refreshMatrixDisplay() {
+    func buildMatrixDisplay() {
         for view in self.view.subviews {
             view.removeFromParentViewController()
         }

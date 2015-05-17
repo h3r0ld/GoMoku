@@ -32,7 +32,7 @@ class GameMenuViewController: UIViewController {
         
         if segue == "NewGameSegue" {
             var VC = segue.destinationViewController as! NewGameViewController
-            VC.refreshMatrixDisplay()
+            VC.buildMatrixDisplay()
         }
         
     }

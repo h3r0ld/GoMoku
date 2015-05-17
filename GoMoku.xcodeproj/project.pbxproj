@@ -10,12 +10,8 @@
 		7202EB881AE5229900CF9AF5 /* GoMokuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7202EB871AE5229900CF9AF5 /* GoMokuModel.swift */; };
 		72259F691AEF792000DE59C0 /* NewGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72259F681AEF791F00DE59C0 /* NewGameViewController.swift */; };
 		72259F6B1AEF817100DE59C0 /* GameMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72259F6A1AEF817100DE59C0 /* GameMenuViewController.swift */; };
-		72506BE81AF7A8DA009C8F55 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72506BE71AF7A8DA009C8F55 /* GameKit.framework */; };
-		72506BEA1AF7AB73009C8F55 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72506BE91AF7AB73009C8F55 /* Network.swift */; };
-		72506BEC1AF7AD7A009C8F55 /* MultiplayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72506BEB1AF7AD7A009C8F55 /* MultiplayerViewController.swift */; };
 		725E96611AEE8C620084BD55 /* GoMokuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725E96601AEE8C620084BD55 /* GoMokuView.swift */; };
-		7286392F1B07688000D152C3 /* WinSequenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7286392E1B07688000D152C3 /* WinSequenceViewController.swift */; };
-		728639311B0768BD00D152C3 /* MapSizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728639301B0768BD00D152C3 /* MapSizeViewController.swift */; };
+		72C103441B07977D00DC30DA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C103431B07977D00DC30DA /* SettingsViewController.swift */; };
 		72F623A51AE517ED00CD1E45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F623A41AE517ED00CD1E45 /* AppDelegate.swift */; };
 		72F623AA1AE517ED00CD1E45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72F623A81AE517ED00CD1E45 /* Main.storyboard */; };
 		72F623AC1AE517ED00CD1E45 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72F623AB1AE517ED00CD1E45 /* Images.xcassets */; };
@@ -37,12 +33,8 @@
 		7202EB871AE5229900CF9AF5 /* GoMokuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoMokuModel.swift; sourceTree = "<group>"; };
 		72259F681AEF791F00DE59C0 /* NewGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGameViewController.swift; sourceTree = "<group>"; };
 		72259F6A1AEF817100DE59C0 /* GameMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameMenuViewController.swift; sourceTree = "<group>"; };
-		72506BE71AF7A8DA009C8F55 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
-		72506BE91AF7AB73009C8F55 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
-		72506BEB1AF7AD7A009C8F55 /* MultiplayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiplayerViewController.swift; sourceTree = "<group>"; };
 		725E96601AEE8C620084BD55 /* GoMokuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoMokuView.swift; sourceTree = "<group>"; };
-		7286392E1B07688000D152C3 /* WinSequenceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinSequenceViewController.swift; sourceTree = "<group>"; };
-		728639301B0768BD00D152C3 /* MapSizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapSizeViewController.swift; sourceTree = "<group>"; };
+		72C103431B07977D00DC30DA /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		72F6239F1AE517ED00CD1E45 /* GoMoku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoMoku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72F623A31AE517ED00CD1E45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72F623A41AE517ED00CD1E45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,7 +51,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72506BE81AF7A8DA009C8F55 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,7 +67,6 @@
 		72F623961AE517ED00CD1E45 = {
 			isa = PBXGroup;
 			children = (
-				72506BE71AF7A8DA009C8F55 /* GameKit.framework */,
 				72F623A11AE517ED00CD1E45 /* GoMoku */,
 				72F623B71AE517ED00CD1E45 /* GoMokuTests */,
 				72F623A01AE517ED00CD1E45 /* Products */,
@@ -96,18 +86,15 @@
 			isa = PBXGroup;
 			children = (
 				72F623A41AE517ED00CD1E45 /* AppDelegate.swift */,
-				728639301B0768BD00D152C3 /* MapSizeViewController.swift */,
 				7202EB871AE5229900CF9AF5 /* GoMokuModel.swift */,
 				72F623A81AE517ED00CD1E45 /* Main.storyboard */,
 				72259F6A1AEF817100DE59C0 /* GameMenuViewController.swift */,
+				72C103431B07977D00DC30DA /* SettingsViewController.swift */,
 				72259F681AEF791F00DE59C0 /* NewGameViewController.swift */,
-				7286392E1B07688000D152C3 /* WinSequenceViewController.swift */,
 				725E96601AEE8C620084BD55 /* GoMokuView.swift */,
 				72F623AB1AE517ED00CD1E45 /* Images.xcassets */,
 				72F623AD1AE517ED00CD1E45 /* LaunchScreen.xib */,
 				72F623A21AE517ED00CD1E45 /* Supporting Files */,
-				72506BE91AF7AB73009C8F55 /* Network.swift */,
-				72506BEB1AF7AD7A009C8F55 /* MultiplayerViewController.swift */,
 			);
 			path = GoMoku;
 			sourceTree = "<group>";
@@ -244,13 +231,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				72259F6B1AEF817100DE59C0 /* GameMenuViewController.swift in Sources */,
-				72506BEA1AF7AB73009C8F55 /* Network.swift in Sources */,
 				725E96611AEE8C620084BD55 /* GoMokuView.swift in Sources */,
+				72C103441B07977D00DC30DA /* SettingsViewController.swift in Sources */,
 				72F623A51AE517ED00CD1E45 /* AppDelegate.swift in Sources */,
-				7286392F1B07688000D152C3 /* WinSequenceViewController.swift in Sources */,
 				7202EB881AE5229900CF9AF5 /* GoMokuModel.swift in Sources */,
-				72506BEC1AF7AD7A009C8F55 /* MultiplayerViewController.swift in Sources */,
-				728639311B0768BD00D152C3 /* MapSizeViewController.swift in Sources */,
 				72259F691AEF792000DE59C0 /* NewGameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

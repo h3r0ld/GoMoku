@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var myGoMoKuModel: GoMokuModel?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        myGoMoKuModel = GoMokuModel(size: 3)
+        myGoMoKuModel = GoMokuModel(size: 3, winSequence: 3)
         return true
     }
 

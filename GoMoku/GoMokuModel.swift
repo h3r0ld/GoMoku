@@ -19,8 +19,9 @@ class GoMokuModel {
         }
     }
     
-    init (size: Int) {
+    init (size: Int, winSequence: Int) {
         matrix = Array(count: size, repeatedValue: Array(count: size, repeatedValue: 0))
+        self.winSequence = winSequence
     }
     
     func getMatrixAtIdx(XCoord x: Int,YCoord y:Int) -> Int {
@@ -104,7 +105,7 @@ class GoMokuModel {
                     // At each cell, we check the diagonal if it has a sequence, which starts with the cell
                     for var x = i; x < matrix[i].count - j; x++ {
 
-                        
+                        if (x < matrix.count-1 && y < matrix.count-1) {
                         if matrix[x][y] != 0 && matrix[x][y] == matrix[x+1][y+1] {
                             sequenceCount++
                             if sequenceCount == sequenceSize - 1 {
@@ -112,6 +113,7 @@ class GoMokuModel {
                             }
                         } else {
                             sequenceCount = 0
+                        }
                         }
                         y++
                     }
@@ -121,8 +123,8 @@ class GoMokuModel {
                 var y = 0
                 
                 // At each cell, we check the diagonal if it has a sequence, which starts with the cell
-                for var x = i; x < matrix.count; x++ {
-                    
+                for var x = i; x < matrix.count-1; x++ {
+
                     if matrix[x][y] != 0 && matrix[x][y] == matrix[x+1][y+1] {
                         sequenceCount++
                         if sequenceCount == sequenceSize - 1 {
@@ -132,6 +134,7 @@ class GoMokuModel {
                     } else {
                         sequenceCount = 0
                     }
+                    
                     y++
                 }
             }
@@ -191,6 +194,33 @@ class GoMokuModel {
             }
         }
         return -1
+    }
+    
+    func checkMatrixForWin(sequenceSize: Int) -> Int {
+        let horizontalAndVerticalResult = checkForWinHorizontalVertical(sequenceSize)
+        let diagonalResultWithRL = checkForWinDiagonalWithDirRL(sequenceSize)
+        let diagonalResultWithLR = checkForWinDiagonalWithDirLR(sequenceSize)
+        
+        if horizontalAndVerticalResult != -1 {
+            return horizontalAndVerticalResult
+        }
+        if diagonalResultWithLR != -1 {
+            return diagonalResultWithLR
+        }
+        if diagonalResultWithRL != -1 {
+            return diagonalResultWithRL
+        }
+        
+        return -1
+    }
+
+    
+    func resetMatrixValuesToNull() {
+        for i in 0..<matrix.count {
+            for j in 0..<matrix[i].count {
+                matrix[i][j] = 0
+            }
+        }
     }
     
     
