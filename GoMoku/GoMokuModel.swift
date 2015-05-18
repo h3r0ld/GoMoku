@@ -24,12 +24,14 @@ class GoMokuModel {
         self.winSequence = winSequence
     }
     
-    func getMatrixAtIdx(XCoord x: Int,YCoord y:Int) -> Int {
-        return matrix[x][y]
-    }
+
     
     func setWinSequenceNeeded(sequenceLength: Int) {
         self.winSequence = sequenceLength
+    }
+    
+    func getWinSequenceNeeded() -> Int {
+        return self.winSequence
     }
     
     subscript(row: Int, column: Int) -> Int {
@@ -43,6 +45,10 @@ class GoMokuModel {
     
     func setMatrixAtIdx(XCoord x: Int,YCoord y:Int, Value value: Int) {
         matrix[x][y] = value
+    }
+    
+    func getMatrixAtIdx(XCoord x: Int,YCoord y:Int) -> Int {
+        return matrix[x][y]
     }
     
     // Checking the matrix if it has a "specified ammount" of
@@ -99,21 +105,19 @@ class GoMokuModel {
             
             if (i == 0) {
                 // Iterating through first row
-                for var j = 0; j < matrix.count - 1; j++ {
+                for var j = 0; j < matrix.count - 2; j++ {
                     var y = j;
                     
                     // At each cell, we check the diagonal if it has a sequence, which starts with the cell
-                    for var x = i; x < matrix[i].count - j; x++ {
+                    for var x = i; x < matrix[i].count - j - 1; x++ {
 
-                        if (x < matrix.count-1 && y < matrix.count-1) {
                         if matrix[x][y] != 0 && matrix[x][y] == matrix[x+1][y+1] {
                             sequenceCount++
-                            if sequenceCount == sequenceSize - 1 {
+                            if sequenceCount == sequenceSize - 1{
                                 return matrix[x][y]
                             }
                         } else {
                             sequenceCount = 0
-                        }
                         }
                         y++
                     }
@@ -123,14 +127,13 @@ class GoMokuModel {
                 var y = 0
                 
                 // At each cell, we check the diagonal if it has a sequence, which starts with the cell
-                for var x = i; x < matrix.count-1; x++ {
+                for var x = i; x < matrix.count - 1; x++ {
 
                     if matrix[x][y] != 0 && matrix[x][y] == matrix[x+1][y+1] {
                         sequenceCount++
-                        if sequenceCount == sequenceSize - 1 {
+                        if sequenceCount == sequenceSize - 1{
                             return matrix[x][y]
                         }
-                        println("\(sequenceCount)")
                     } else {
                         sequenceCount = 0
                     }
@@ -196,10 +199,10 @@ class GoMokuModel {
         return -1
     }
     
-    func checkMatrixForWin(sequenceSize: Int) -> Int {
-        let horizontalAndVerticalResult = checkForWinHorizontalVertical(sequenceSize)
-        let diagonalResultWithRL = checkForWinDiagonalWithDirRL(sequenceSize)
-        let diagonalResultWithLR = checkForWinDiagonalWithDirLR(sequenceSize)
+    func checkMatrixForWin() -> Int {
+        let horizontalAndVerticalResult = checkForWinHorizontalVertical(winSequence)
+        let diagonalResultWithRL = checkForWinDiagonalWithDirRL(winSequence)
+        let diagonalResultWithLR = checkForWinDiagonalWithDirLR(winSequence)
         
         if horizontalAndVerticalResult != -1 {
             return horizontalAndVerticalResult

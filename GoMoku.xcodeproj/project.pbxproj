@@ -11,6 +11,14 @@
 		72259F691AEF792000DE59C0 /* NewGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72259F681AEF791F00DE59C0 /* NewGameViewController.swift */; };
 		72259F6B1AEF817100DE59C0 /* GameMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72259F6A1AEF817100DE59C0 /* GameMenuViewController.swift */; };
 		725E96611AEE8C620084BD55 /* GoMokuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725E96601AEE8C620084BD55 /* GoMokuView.swift */; };
+		72A35FD91B094302008D1B93 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A35FD61B094302008D1B93 /* GCDAsyncSocket.m */; };
+		72A35FDC1B09D5EC008D1B93 /* TcpHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A35FDB1B09D5EC008D1B93 /* TcpHandler.swift */; };
+		72A35FDE1B09D605008D1B93 /* HostGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A35FDD1B09D605008D1B93 /* HostGameViewController.swift */; };
+		72A35FE01B09E451008D1B93 /* NetworkDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A35FDF1B09E451008D1B93 /* NetworkDelegate.swift */; };
+		72A35FE21B09E84A008D1B93 /* JoinGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A35FE11B09E84A008D1B93 /* JoinGameViewController.swift */; };
+		72A35FE41B09EF8C008D1B93 /* MultiplayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A35FE31B09EF8C008D1B93 /* MultiplayerViewController.swift */; };
+		72A35FE61B0A6B39008D1B93 /* endGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A35FE51B0A6B39008D1B93 /* endGameViewController.swift */; };
+		72A35FE81B0A7BF8008D1B93 /* MultiplayerEndGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A35FE71B0A7BF8008D1B93 /* MultiplayerEndGameViewController.swift */; };
 		72C103441B07977D00DC30DA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C103431B07977D00DC30DA /* SettingsViewController.swift */; };
 		72F623A51AE517ED00CD1E45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F623A41AE517ED00CD1E45 /* AppDelegate.swift */; };
 		72F623AA1AE517ED00CD1E45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72F623A81AE517ED00CD1E45 /* Main.storyboard */; };
@@ -34,6 +42,16 @@
 		72259F681AEF791F00DE59C0 /* NewGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGameViewController.swift; sourceTree = "<group>"; };
 		72259F6A1AEF817100DE59C0 /* GameMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameMenuViewController.swift; sourceTree = "<group>"; };
 		725E96601AEE8C620084BD55 /* GoMokuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoMokuView.swift; sourceTree = "<group>"; };
+		72A35FD31B094301008D1B93 /* GoMoku-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoMoku-Bridging-Header.h"; sourceTree = "<group>"; };
+		72A35FD51B094302008D1B93 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		72A35FD61B094302008D1B93 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		72A35FDB1B09D5EC008D1B93 /* TcpHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TcpHandler.swift; sourceTree = "<group>"; };
+		72A35FDD1B09D605008D1B93 /* HostGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostGameViewController.swift; sourceTree = "<group>"; };
+		72A35FDF1B09E451008D1B93 /* NetworkDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkDelegate.swift; sourceTree = "<group>"; };
+		72A35FE11B09E84A008D1B93 /* JoinGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinGameViewController.swift; sourceTree = "<group>"; };
+		72A35FE31B09EF8C008D1B93 /* MultiplayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiplayerViewController.swift; sourceTree = "<group>"; };
+		72A35FE51B0A6B39008D1B93 /* endGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = endGameViewController.swift; sourceTree = "<group>"; };
+		72A35FE71B0A7BF8008D1B93 /* MultiplayerEndGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiplayerEndGameViewController.swift; sourceTree = "<group>"; };
 		72C103431B07977D00DC30DA /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		72F6239F1AE517ED00CD1E45 /* GoMoku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoMoku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72F623A31AE517ED00CD1E45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -64,9 +82,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		72A35FDA1B094321008D1B93 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				72A35FDB1B09D5EC008D1B93 /* TcpHandler.swift */,
+				72A35FD51B094302008D1B93 /* GCDAsyncSocket.h */,
+				72A35FD61B094302008D1B93 /* GCDAsyncSocket.m */,
+				72A35FD31B094301008D1B93 /* GoMoku-Bridging-Header.h */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
 		72F623961AE517ED00CD1E45 = {
 			isa = PBXGroup;
 			children = (
+				72A35FE71B0A7BF8008D1B93 /* MultiplayerEndGameViewController.swift */,
 				72F623A11AE517ED00CD1E45 /* GoMoku */,
 				72F623B71AE517ED00CD1E45 /* GoMokuTests */,
 				72F623A01AE517ED00CD1E45 /* Products */,
@@ -88,10 +118,16 @@
 				72F623A41AE517ED00CD1E45 /* AppDelegate.swift */,
 				7202EB871AE5229900CF9AF5 /* GoMokuModel.swift */,
 				72F623A81AE517ED00CD1E45 /* Main.storyboard */,
+				72A35FE51B0A6B39008D1B93 /* endGameViewController.swift */,
+				72A35FE31B09EF8C008D1B93 /* MultiplayerViewController.swift */,
+				72A35FDF1B09E451008D1B93 /* NetworkDelegate.swift */,
+				72A35FDD1B09D605008D1B93 /* HostGameViewController.swift */,
+				72A35FE11B09E84A008D1B93 /* JoinGameViewController.swift */,
 				72259F6A1AEF817100DE59C0 /* GameMenuViewController.swift */,
 				72C103431B07977D00DC30DA /* SettingsViewController.swift */,
 				72259F681AEF791F00DE59C0 /* NewGameViewController.swift */,
 				725E96601AEE8C620084BD55 /* GoMokuView.swift */,
+				72A35FDA1B094321008D1B93 /* Networking */,
 				72F623AB1AE517ED00CD1E45 /* Images.xcassets */,
 				72F623AD1AE517ED00CD1E45 /* LaunchScreen.xib */,
 				72F623A21AE517ED00CD1E45 /* Supporting Files */,
@@ -176,7 +212,7 @@
 						DevelopmentTeam = 3PKRW86A3H;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -230,11 +266,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72A35FE21B09E84A008D1B93 /* JoinGameViewController.swift in Sources */,
+				72A35FE41B09EF8C008D1B93 /* MultiplayerViewController.swift in Sources */,
+				72A35FDC1B09D5EC008D1B93 /* TcpHandler.swift in Sources */,
+				72A35FE01B09E451008D1B93 /* NetworkDelegate.swift in Sources */,
+				72A35FE61B0A6B39008D1B93 /* endGameViewController.swift in Sources */,
 				72259F6B1AEF817100DE59C0 /* GameMenuViewController.swift in Sources */,
+				72A35FDE1B09D605008D1B93 /* HostGameViewController.swift in Sources */,
+				72A35FE81B0A7BF8008D1B93 /* MultiplayerEndGameViewController.swift in Sources */,
 				725E96611AEE8C620084BD55 /* GoMokuView.swift in Sources */,
 				72C103441B07977D00DC30DA /* SettingsViewController.swift in Sources */,
 				72F623A51AE517ED00CD1E45 /* AppDelegate.swift in Sources */,
 				7202EB881AE5229900CF9AF5 /* GoMokuModel.swift in Sources */,
+				72A35FD91B094302008D1B93 /* GCDAsyncSocket.m in Sources */,
 				72259F691AEF792000DE59C0 /* NewGameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,11 +408,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = GoMoku/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GoMoku/GoMoku-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -377,11 +424,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = GoMoku/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GoMoku/GoMoku-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
