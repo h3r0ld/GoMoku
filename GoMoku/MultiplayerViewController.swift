@@ -126,7 +126,16 @@ class MultiplayerViewController: UIViewController, NetworkDelegate {
     }
     
     override func viewWillDisappear(animated: Bool) {
-//        tcpHandler.disconnect()
+
+        var isRemoved = true
+        for vc in self.navigationController!.viewControllers {
+            if vc as! UIViewController == self {
+                isRemoved = false
+            }
+        }
+        if isRemoved {
+            tcpHandler.disconnect()
+        }
     }
 
     
