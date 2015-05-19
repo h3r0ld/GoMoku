@@ -62,7 +62,7 @@ class NewGameViewController: UIViewController {
         
         if player1isComing &&  goMokuModel?.getMatrixAtIdx(XCoord: tappedView.idx, YCoord: tappedView.idy) == 0{
             goMokuModel?.setMatrixAtIdx(XCoord: tappedView.idx, YCoord: tappedView.idy, Value: 1)
-            tappedView.backgroundColor = UIColor.redColor()
+            tappedView.backgroundColor = UIColor(red: 0.027, green: 0.262, blue: 0.69, alpha: 1) //dark blue
             player1isComing = false
             if goMokuModel?.checkMatrixForWin() == 1 {
                 println("Player 1 won the game.")
@@ -74,7 +74,7 @@ class NewGameViewController: UIViewController {
         } else
         if (goMokuModel?.getMatrixAtIdx(XCoord: tappedView.idx, YCoord: tappedView.idy) == 0){
             goMokuModel?.setMatrixAtIdx(XCoord: tappedView.idx, YCoord: tappedView.idy, Value: 2)
-            tappedView.backgroundColor = UIColor.grayColor()
+            tappedView.backgroundColor = UIColor(red: 0.419, green: 0.188, blue: 0.5607, alpha: 1) // darkpurple
             player1isComing = true
             if goMokuModel?.checkMatrixForWin() == 2 {
                 println("Player 2 won the game.")

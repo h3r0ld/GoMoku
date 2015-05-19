@@ -67,7 +67,7 @@ class MultiplayerViewController: UIViewController, NetworkDelegate {
         
         if myTurn && goMoku.getMatrixAtIdx(XCoord: tappedView.idx, YCoord: tappedView.idy) == 0 {
             goMoku.setMatrixAtIdx(XCoord: tappedView.idx, YCoord: tappedView.idy, Value: 1)
-            tappedView.backgroundColor = UIColor.redColor()
+            tappedView.backgroundColor = UIColor(red: 0.027, green: 0.262, blue: 0.69, alpha: 1) //dark blue
             tcpHandler.sendNumbers(tappedView.idx, number2: tappedView.idy)
             myTurn = false
             if goMoku.checkMatrixForWin() == 1 {
@@ -92,10 +92,10 @@ class MultiplayerViewController: UIViewController, NetworkDelegate {
     
     func receivedNumbers(number1: Int, number2: Int) {
         goMoku.setMatrixAtIdx(XCoord: number1, YCoord: number2, Value: 2)
-        goMokuViews[number1][number2].backgroundColor = UIColor.blackColor()
+        goMokuViews[number1][number2].backgroundColor = UIColor(red: 0.419, green: 0.188, blue: 0.5607, alpha: 1) // darkpurple
         if goMoku.checkMatrixForWin() == 2 {
             println("You lost the game.")
-            outcome = "You won the game!"
+            outcome = "You lost the game!"
             performSegueWithIdentifier("endGameSegue", sender: self)
         }
         myTurn = true
@@ -126,7 +126,7 @@ class MultiplayerViewController: UIViewController, NetworkDelegate {
     }
     
     override func viewWillDisappear(animated: Bool) {
-        tcpHandler.disconnect()
+//        tcpHandler.disconnect()
     }
 
     

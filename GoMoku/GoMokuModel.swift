@@ -109,8 +109,12 @@ class GoMokuModel {
                     var y = j;
                     
                     // At each cell, we check the diagonal if it has a sequence, which starts with the cell
+                    
                     for var x = i; x < matrix[i].count - j - 1; x++ {
-
+                        
+                        if y == 0 {
+                            sequenceCount = 0
+                        }
                         if matrix[x][y] != 0 && matrix[x][y] == matrix[x+1][y+1] {
                             sequenceCount++
                             if sequenceCount == sequenceSize - 1{
@@ -128,7 +132,9 @@ class GoMokuModel {
                 
                 // At each cell, we check the diagonal if it has a sequence, which starts with the cell
                 for var x = i; x < matrix.count - 1; x++ {
-
+                    if y == 0 {
+                        sequenceCount = 0
+                    }
                     if matrix[x][y] != 0 && matrix[x][y] == matrix[x+1][y+1] {
                         sequenceCount++
                         if sequenceCount == sequenceSize - 1{
@@ -167,6 +173,10 @@ class GoMokuModel {
                     var y = j
                     // At each cell, we check the diagonal if it has a sequence, which starts with the cell
                     for var x = i; x > j; x-- {
+                        
+                        if x == sequenceSize - 1 {
+                            sequenceCount = 0
+                        }
                         if (matrix[x][y] != 0 && matrix[x][y] == matrix[x-1][y+1]) {
                             sequenceCount++
                             

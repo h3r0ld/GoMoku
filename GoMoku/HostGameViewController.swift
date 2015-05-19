@@ -80,6 +80,10 @@ class HostGameViewController: UIViewController, NetworkDelegate {
         tcpHandler.startListening()
         tcpHandler.delegate = self
     }
+    
+    override func viewWillDisappear(animated: Bool) {
+        tcpHandler.stopListening()
+    }
 
 
     // MARK: - Navigation
