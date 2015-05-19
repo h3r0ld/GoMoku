@@ -29,6 +29,9 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="100"/>
+                                        </variation>
                                         <connections>
                                             <segue destination="Qu7-9t-9EC" kind="show" id="Jnv-hW-Per"/>
                                         </connections>
@@ -41,6 +44,9 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="100"/>
+                                        </variation>
                                         <connections>
                                             <segue destination="KCt-W9-6C5" kind="show" id="CxT-mm-Y4Y"/>
                                         </connections>
@@ -98,7 +104,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <variation key="widthClass=regular">
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="50"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="70"/>
                                         </variation>
                                         <connections>
                                             <segue destination="ZBs-DR-ByX" kind="show" identifier="NewGameSegue" id="uzl-xg-C6y"/>
@@ -113,7 +119,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <variation key="widthClass=regular">
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="50"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="70"/>
                                         </variation>
                                         <connections>
                                             <segue destination="87V-p5-ZM2" kind="show" id="XFu-IN-dZK"/>
@@ -200,24 +206,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap anywhere to continue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30e-ux-di7">
-                                <rect key="frame" x="182" y="312" width="236" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap anywhere to replay" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30e-ux-di7">
+                                <rect key="frame" x="195" y="312" width="211" height="27"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="23"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="33"/>
+                                    <rect key="frame" x="282" y="412" width="236" height="27"/>
+                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1 won the game!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VX0-1t-ZKZ">
                                 <rect key="frame" x="152" y="257" width="296" height="36"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="70"/>
+                                    <rect key="frame" x="252" y="357" width="296" height="36"/>
+                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="VX0-1t-ZKZ" secondAttribute="centerY" constant="25" id="jYk-YJ-e2B"/>
-                            <constraint firstAttribute="centerY" secondItem="30e-ux-di7" secondAttribute="centerY" constant="-25" id="qbj-X5-lzJ"/>
+                            <constraint firstAttribute="centerY" secondItem="30e-ux-di7" secondAttribute="centerY" constant="-25" id="qbj-X5-lzJ">
+                                <variation key="heightClass=regular-widthClass=regular" constant="-50"/>
+                            </constraint>
                             <constraint firstAttribute="centerX" secondItem="30e-ux-di7" secondAttribute="centerX" id="u6T-Vf-9MF"/>
                             <constraint firstAttribute="centerX" secondItem="VX0-1t-ZKZ" secondAttribute="centerX" id="wR6-cN-rMH"/>
                         </constraints>
@@ -263,7 +279,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <variation key="widthClass=regular">
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="50"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="70"/>
                                         </variation>
                                         <connections>
                                             <segue destination="KR7-Ih-Su6" kind="show" id="7fl-VE-DYT"/>
@@ -278,7 +294,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <variation key="widthClass=regular">
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="50"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="70"/>
                                         </variation>
                                         <connections>
                                             <segue destination="I0M-hP-gbi" kind="show" id="tVc-Ic-JDI"/>
@@ -333,6 +349,9 @@
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="35"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="70"/>
+                                        </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your ip address:" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSD-d3-W7c">
                                         <rect key="frame" x="0.0" y="268" width="600" height="268"/>
@@ -340,6 +359,9 @@
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="60"/>
+                                        </variation>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -398,16 +420,23 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qa5-jr-bjl">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="268"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Join a game" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfF-Ir-q5E">
-                                                <rect key="frame" x="211" y="113" width="179" height="42"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Join a game" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfF-Ir-q5E">
+                                                <rect key="frame" x="186" y="113" width="230" height="42"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="35"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="70"/>
+                                                    <rect key="frame" x="311" y="163" width="179" height="42"/>
+                                                </variation>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="The host's IP address" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="unE-QB-rOd">
-                                                <rect key="frame" x="198" y="169" width="204" height="30"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="14"/>
+                                                <rect key="frame" x="173" y="169" width="255" height="30"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="26"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                                    <rect key="frame" x="298" y="219" width="204" height="30"/>
+                                                </variation>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" red="0.039215686274509803" green="0.0" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
@@ -415,7 +444,9 @@
                                         <constraints>
                                             <constraint firstAttribute="centerX" secondItem="hfF-Ir-q5E" secondAttribute="centerX" id="6nl-3V-W99"/>
                                             <constraint firstAttribute="centerY" secondItem="hfF-Ir-q5E" secondAttribute="centerY" id="QKV-7X-nHQ"/>
-                                            <constraint firstAttribute="centerY" secondItem="unE-QB-rOd" secondAttribute="centerY" constant="-50" id="VWI-gu-aWZ"/>
+                                            <constraint firstAttribute="centerY" secondItem="unE-QB-rOd" secondAttribute="centerY" constant="-50" id="VWI-gu-aWZ">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="-100"/>
+                                            </constraint>
                                             <constraint firstItem="unE-QB-rOd" firstAttribute="width" secondItem="hfF-Ir-q5E" secondAttribute="width" constant="25" id="xgE-p2-ash"/>
                                             <constraint firstAttribute="centerX" secondItem="unE-QB-rOd" secondAttribute="centerX" id="z4d-mo-hEs"/>
                                         </constraints>
@@ -431,6 +462,9 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="70"/>
+                                        </variation>
                                         <connections>
                                             <action selector="connectToIPAddr:" destination="I0M-hP-gbi" eventType="touchUpInside" id="x2K-Ol-Uyv"/>
                                         </connections>
@@ -494,10 +528,16 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="25"/>
+                                    <rect key="frame" x="16" y="696" width="768" height="24"/>
+                                </variation>
                             </label>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="OQr-Lb-C8l" firstAttribute="top" secondItem="jtr-YR-Io7" secondAttribute="bottom" constant="20" id="1U7-oh-mpX"/>
+                            <constraint firstItem="OQr-Lb-C8l" firstAttribute="top" secondItem="jtr-YR-Io7" secondAttribute="bottom" constant="20" id="1U7-oh-mpX">
+                                <variation key="heightClass=regular-widthClass=regular" constant="80"/>
+                            </constraint>
                             <constraint firstAttribute="trailing" secondItem="pt6-xp-NaX" secondAttribute="trailing" id="GxK-Pg-d6V"/>
                             <constraint firstItem="OQr-Lb-C8l" firstAttribute="top" secondItem="pt6-xp-NaX" secondAttribute="bottom" id="I18-7k-Ihi"/>
                             <constraint firstItem="pt6-xp-NaX" firstAttribute="top" secondItem="Ijv-b5-XmA" secondAttribute="bottom" id="SsH-9t-c5K"/>
@@ -533,12 +573,20 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="23"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="33"/>
+                                    <rect key="frame" x="295" y="412" width="211" height="27"/>
+                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You won the game!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iSf-gG-l1N">
                                 <rect key="frame" x="180" y="257" width="241" height="36"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="60"/>
+                                    <rect key="frame" x="280" y="357" width="241" height="36"/>
+                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -551,7 +599,9 @@
                             <constraint firstItem="Jn4-VV-HR3" firstAttribute="leading" secondItem="8M2-qB-YUs" secondAttribute="leadingMargin" id="Xx2-RI-1dm"/>
                             <constraint firstItem="iSf-gG-l1N" firstAttribute="leading" secondItem="8M2-qB-YUs" secondAttribute="leadingMargin" id="aMq-6Q-aAG"/>
                             <constraint firstAttribute="centerX" secondItem="Jn4-VV-HR3" secondAttribute="centerX" id="imy-nJ-Zak"/>
-                            <constraint firstAttribute="centerY" secondItem="Jn4-VV-HR3" secondAttribute="centerY" constant="-25" id="zJU-ro-ZRl"/>
+                            <constraint firstAttribute="centerY" secondItem="Jn4-VV-HR3" secondAttribute="centerY" constant="-25" id="zJU-ro-ZRl">
+                                <variation key="heightClass=regular-widthClass=regular" constant="-50"/>
+                            </constraint>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -603,8 +653,11 @@
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="widthClass=regular" misplaced="YES">
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="70"/>
                                                     <rect key="frame" x="215" y="85" width="372" height="48"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                                    <rect key="frame" x="214" y="135" width="372" height="48"/>
                                                 </variation>
                                             </label>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5FV-G5-USQ">
@@ -623,7 +676,9 @@
                                         <color key="backgroundColor" red="0.078431372549019607" green="0.25490196078431371" blue="0.72156862745098038" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="5FV-G5-USQ" firstAttribute="width" secondItem="Wsn-Gz-mKl" secondAttribute="width" id="BlY-u3-M2r"/>
-                                            <constraint firstAttribute="centerY" secondItem="5FV-G5-USQ" secondAttribute="centerY" constant="-25" id="JEX-zW-VKZ"/>
+                                            <constraint firstAttribute="centerY" secondItem="5FV-G5-USQ" secondAttribute="centerY" constant="-25" id="JEX-zW-VKZ">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="-50"/>
+                                            </constraint>
                                             <constraint firstItem="5FV-G5-USQ" firstAttribute="width" secondItem="Wsn-Gz-mKl" secondAttribute="width" id="MVL-N1-pwR"/>
                                             <constraint firstAttribute="centerY" secondItem="Wsn-Gz-mKl" secondAttribute="centerY" constant="25" id="SRa-1e-ulQ"/>
                                             <constraint firstAttribute="centerX" secondItem="Wsn-Gz-mKl" secondAttribute="centerX" id="W92-ad-ema"/>
@@ -653,7 +708,10 @@
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="widthClass=regular">
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="70"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                                    <rect key="frame" x="0.0" y="135" width="400" height="48"/>
                                                 </variation>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTP-tl-nvM">
@@ -661,6 +719,10 @@
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="70"/>
+                                                    <rect key="frame" x="400" y="141" width="400" height="36"/>
+                                                </variation>
                                             </label>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="3" maxValue="15" translatesAutoresizingMaskIntoConstraints="NO" id="3HZ-oz-AVU">
                                                 <rect key="frame" x="48" y="169" width="504" height="31"/>
@@ -787,6 +849,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="AIz-gY-4Q1"/>
+        <segue reference="1q1-sK-hrD"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -65,9 +65,15 @@ class NewGameViewController: UIViewController {
             tappedView.backgroundColor = UIColor(red: 0.027, green: 0.262, blue: 0.69, alpha: 1) //dark blue
             player1isComing = false
             if goMokuModel?.checkMatrixForWin() == 1 {
-                println("Player 1 won the game.")
-                winner = "Player 1"
+                println("Blue won the game.")
+                winner = "Blue won the game"
                 performSegueWithIdentifier("endGameSegue", sender: self)
+            } else {
+                if goMokuModel!.isMatrixFullWithValues() {
+                    println("It's a draw")
+                    winner = "It's a draw!"
+                    performSegueWithIdentifier("endGameSegue", sender: self)
+                }
             }
             goMokuModel?.printMatrix()
             println()
@@ -77,11 +83,18 @@ class NewGameViewController: UIViewController {
             tappedView.backgroundColor = UIColor(red: 0.419, green: 0.188, blue: 0.5607, alpha: 1) // darkpurple
             player1isComing = true
             if goMokuModel?.checkMatrixForWin() == 2 {
-                println("Player 2 won the game.")
+                println("Purple won the game.")
 //                presentModalVCwithText("Player 2 won the game.")
-                winner = "Player 2"
+                winner = "Purple won the game!"
                 performSegueWithIdentifier("endGameSegue", sender: self)
+            } else {
+            if goMokuModel!.isMatrixFullWithValues() {
+                println("It's a draw")
+                winner = "It's a draw!"
+                performSegueWithIdentifier("endGameSegue", sender: self)
+                }
             }
+            
             goMokuModel?.printMatrix()
             println()
         }

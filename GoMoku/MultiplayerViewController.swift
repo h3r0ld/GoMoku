@@ -74,6 +74,12 @@ class MultiplayerViewController: UIViewController, NetworkDelegate {
                 println("You won the game!")
                 outcome = "You won the game!"
                 performSegueWithIdentifier("endGameSegue", sender: self)
+            } else {
+                if goMoku!.isMatrixFullWithValues() {
+                    println("It's a draw")
+                    outcome = "It's a draw!"
+                    performSegueWithIdentifier("endGameSegue", sender: self)
+                }
             }
             goMoku?.printMatrix()
             println()
@@ -97,6 +103,12 @@ class MultiplayerViewController: UIViewController, NetworkDelegate {
             println("You lost the game.")
             outcome = "You lost the game!"
             performSegueWithIdentifier("endGameSegue", sender: self)
+        } else {
+            if goMoku.isMatrixFullWithValues() {
+                println("It's a draw")
+                outcome = "It's a draw!"
+                performSegueWithIdentifier("endGameSegue", sender: self)
+            }
         }
         myTurn = true
         messageLabel.text = "It's my turn!!! yaaay"

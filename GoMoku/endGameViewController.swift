@@ -16,7 +16,7 @@ class endGameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        outcomeLabel.text = outcomeLabelText + " won the game!"
+        outcomeLabel.text = outcomeLabelText
         // Do any additional setup after loading the view.
     }
 

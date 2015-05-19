@@ -24,8 +24,6 @@ class GoMokuModel {
         self.winSequence = winSequence
     }
     
-
-    
     func setWinSequenceNeeded(sequenceLength: Int) {
         self.winSequence = sequenceLength
     }
@@ -227,6 +225,20 @@ class GoMokuModel {
         return -1
     }
 
+    // Checking if the matrix has no '0' values.
+    // Meaning: the matrix is full, the players can't have any more turns
+    // @return: true if it's full, false if it still has '0' values
+    func isMatrixFullWithValues() -> Bool {
+        for i in 0..<matrix.count {
+            for j in 0..<matrix[i].count {
+                if matrix[i][j] == 0 {
+                    return false
+                }
+            }
+        }
+        
+        return true
+    }
     
     func resetMatrixValuesToNull() {
         for i in 0..<matrix.count {
