@@ -10,6 +10,7 @@
 import UIKit
 
 class NewGameViewController: UIViewController {
+    
     var goMokuViews: [[GoMokuView]] = []
     var goMokuMatrix: [[Int]] = []
     var goMokuModel: GoMokuModel?

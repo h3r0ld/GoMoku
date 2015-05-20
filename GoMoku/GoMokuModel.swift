@@ -13,25 +13,31 @@ class GoMokuModel {
     var matrix: [[Int]]
     var winSequence = 3
     
+    // Computed property for the matrix's size, which is quadratic
     var Size: Int{
         get {
                 return matrix.count
         }
     }
     
+    // Initialize with size and win sequence
     init (size: Int, winSequence: Int) {
         matrix = Array(count: size, repeatedValue: Array(count: size, repeatedValue: 0))
         self.winSequence = winSequence
     }
     
+    // Set the sequence length which is needed to win the game
     func setWinSequenceNeeded(sequenceLength: Int) {
         self.winSequence = sequenceLength
     }
     
+    // Get the sequence length which is needed to win the game
     func getWinSequenceNeeded() -> Int {
         return self.winSequence
     }
     
+    // [,] operator for the model
+    // It makes the code a bit unreadable, if we use this
     subscript(row: Int, column: Int) -> Int {
         get {
             return matrix[row][column]
@@ -41,10 +47,12 @@ class GoMokuModel {
         }
     }
     
+    // Set the matrix's value at a specified index.
     func setMatrixAtIdx(XCoord x: Int,YCoord y:Int, Value value: Int) {
         matrix[x][y] = value
     }
     
+    // Get the matrix's value at a specified index.
     func getMatrixAtIdx(XCoord x: Int,YCoord y:Int) -> Int {
         return matrix[x][y]
     }
@@ -141,7 +149,6 @@ class GoMokuModel {
                     } else {
                         sequenceCount = 0
                     }
-                    
                     y++
                 }
             }
@@ -207,6 +214,9 @@ class GoMokuModel {
         return -1
     }
     
+    // Checks the matrix, if it has a winSequence long unbroken row of a value
+    // Checks it horizontally, vertically, and diagonally as well.
+    // @return: Returns the value which is in the unbroken row, so the winner's value.
     func checkMatrixForWin() -> Int {
         let horizontalAndVerticalResult = checkForWinHorizontalVertical(winSequence)
         let diagonalResultWithRL = checkForWinDiagonalWithDirRL(winSequence)
@@ -240,6 +250,7 @@ class GoMokuModel {
         return true
     }
     
+    // Sets the matrix's values to 0
     func resetMatrixValuesToNull() {
         for i in 0..<matrix.count {
             for j in 0..<matrix[i].count {
@@ -249,7 +260,8 @@ class GoMokuModel {
     }
     
     
-    //For Logging
+    // For Logging
+    // Write the matrix to the std:out
     func printMatrix() {
         for i in 0..<matrix.count {
             for j in 0...matrix[i].count-1 {

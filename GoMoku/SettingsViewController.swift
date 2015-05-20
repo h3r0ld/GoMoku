@@ -7,14 +7,16 @@
 //
 
 import UIKit
-
+// View controller for settings
 class SettingsViewController: UIViewController {
+    
     @IBOutlet weak var winSeqSegCtrl: UISegmentedControl!
     @IBOutlet weak var mapSizeLabel: UILabel!
     @IBOutlet weak var mapSizeSlider: UISlider!
     
     var goMokuModel = GoMokuModel(size: 3, winSequence: 3)
     
+    // Computed property for winSequence, it depends on the segmented control
     var winSequence: Int {
         get {
             switch winSeqSegCtrl.selectedSegmentIndex {
@@ -26,6 +28,7 @@ class SettingsViewController: UIViewController {
         }
     }
     
+    // Rounded integer value of the slider
     var mapSizeSliderValue: Int {
         get {
             return Int(mapSizeSlider.value)
@@ -36,14 +39,18 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
         
     }
+    
+    // If the slider changes, we change the label
     @IBAction func mapSizeSliderValueChanged(sender: AnyObject) {
         mapSizeLabel.text = "\(Int(mapSizeSlider.value))"
     }
     
+    // The model's winsequence is setted by the segmented control
     @IBAction func winSeqSegCtrlValueChanged(sender: AnyObject) {
         AppDelegate.sharedAppDelegate().myGoMoKuModel!.setWinSequenceNeeded(winSequence)
     }
     
+    // If the view appears, we need to set the GUI, so it truly represents the model
     override func viewWillAppear(animated: Bool) {
         goMokuModel = AppDelegate.sharedAppDelegate().myGoMoKuModel!
         mapSizeSlider.value = Float(AppDelegate.sharedAppDelegate().myGoMoKuModel!.Size)
@@ -58,11 +65,9 @@ class SettingsViewController: UIViewController {
         }
     }
     
+    // Save the changes
     override func viewWillDisappear(animated: Bool) {
         AppDelegate.sharedAppDelegate().myGoMoKuModel = GoMokuModel(size: mapSizeSliderValue, winSequence: winSequence)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
 }

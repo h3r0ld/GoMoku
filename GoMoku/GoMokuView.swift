@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+// Special view for the model, we need to know the indices
 class GoMokuView: UIView {
     var idx = 0
     var idy = 0
