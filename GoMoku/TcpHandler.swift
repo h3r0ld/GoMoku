@@ -2,8 +2,8 @@
 //  TcpHandler.swift
 //  SwiftNetworking
 //
-//  Created by Ben Herold on 16/05/15.
-//  Copyright (c) 2015 Ben Herold. All rights reserved.
+//  Created by Herold Kristóf on 16/05/15.
+//  Copyright (c) 2015 Herold Kristóf. All rights reserved.
 //
 
 import Foundation
