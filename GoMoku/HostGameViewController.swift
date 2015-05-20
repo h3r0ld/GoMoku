@@ -8,42 +8,47 @@
 
 
 import UIKit
-
+// View controller for hosting..
 class HostGameViewController: UIViewController, NetworkDelegate {
 
     @IBOutlet weak var myIPaddr: UILabel!
     var tcpHandler: TcpHandler!
-    
+
+    // Set the delegate
+    // Present our IP address
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tcpHandler = TcpHandler(delegate: self)
-        
         myIPaddr.text = "Your IP address: " + "\n" + "\(getIFAddress())"
         println(myIPaddr.text)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
+    
+    // Delegate method, called when the other player connected to the host
     func connected(host: String) {
+        
         let goMoku = AppDelegate.sharedAppDelegate().myGoMoKuModel
         println("Peer connected: \(host)")
+        // Send the model attributes to the peer
         tcpHandler.sendNumbers(goMoku!.Size, number2: goMoku!.getWinSequenceNeeded())
         performSegueWithIdentifier("gameSceneSegue", sender: self)
         tcpHandler.stopListening()
     }
     
     func disconnected() {
-        
+        // We not yet connected, so we dont need to disconnect
     }
     
     func receivedNumbers(number1: Int, number2: Int) {
-        
+        // We dont receive numbers from the other player, if we host
     }
     
+    // Ref: http://stackoverflow.com/questions/25626117/how-to-get-ip-address-in-swift
+    // Gets the host's ip address
     func getIFAddress() -> String {
         var address = String()
         
@@ -56,7 +61,7 @@ class HostGameViewController: UIViewController, NetworkDelegate {
                 let flags = Int32(ptr.memory.ifa_flags)
                 var addr = ptr.memory.ifa_addr.memory
                 
-                // Check for running IPv4, IPv6 interfaces. Skip the loopback interface.
+                // Check for running IPv4 interface. Skip the loopback interface.
                 if (flags & (IFF_UP|IFF_RUNNING|IFF_LOOPBACK)) == (IFF_UP|IFF_RUNNING) {
                     if addr.sa_family == UInt8(AF_INET) {
                         
@@ -76,22 +81,21 @@ class HostGameViewController: UIViewController, NetworkDelegate {
         return address
     }
     
+    // If the view appears, start listening for incoming connections
     override func viewWillAppear(animated: Bool) {
         tcpHandler.startListening()
         tcpHandler.delegate = self
     }
     
+    // If the view disappears, stop listening for incoming connections
     override func viewWillDisappear(animated: Bool) {
         tcpHandler.stopListening()
     }
 
-
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    // We need to pass the undermentioned attributes:
+    // - tcpHandler
+    // - model
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
         let multiplayerViewController = segue.destinationViewController as! MultiplayerViewController
         
         multiplayerViewController.tcpHandler = self.tcpHandler

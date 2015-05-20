@@ -11,16 +11,14 @@ import UIKit
 class MultiplayerEndGameViewController: UIViewController {
 
     @IBOutlet weak var messageLabel: UILabel!
-    
     var outcomeLabel: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         messageLabel.text = outcomeLabel
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }

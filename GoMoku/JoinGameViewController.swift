@@ -14,6 +14,7 @@ class JoinGameViewController: UIViewController, NetworkDelegate {
     var tcpHandler: TcpHandler!
     var goMoku: GoMokuModel!
     
+    // Create the tcpHandler
     override func viewDidLoad() {
         super.viewDidLoad()
         tcpHandler = TcpHandler(delegate: self)
@@ -21,43 +22,42 @@ class JoinGameViewController: UIViewController, NetworkDelegate {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        println("Memory warning.")
     }
     
+    // Action button, connect to the entered IP address
     @IBAction func connectToIPAddr(sender: AnyObject) {
         tcpHandler.connectToDevice(ipAddr.text)
     }
 
+    // If we connected to the host... log it
     func connected(host: String) {
         println("Connected to host: \(ipAddr.text)")
     }
     
     func disconnected() {
-        
+        // We're waiting to connect, so we do nothing at disconnect
     }
     
+    // If we received the model's attributes, we can go to the game scene
     func receivedNumbers(number1: Int, number2: Int) {
         goMoku = GoMokuModel(size: number1, winSequence: number2)
-        
         performSegueWithIdentifier("gameSceneSegue", sender: self)
     }
+    
     
     override func viewWillAppear(animated: Bool) {
         tcpHandler.delegate = self
     }
     
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    // preparing to go to the game scene
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
         let multiplayerViewController = segue.destinationViewController as! MultiplayerViewController
         multiplayerViewController.tcpHandler = self.tcpHandler
         multiplayerViewController.goMoku = self.goMoku
-        
-        
     }
     
+    // Remove keyboard
     @IBAction func joinAGameViewTapped(sender: AnyObject) {
         println("tapped")
         let view = (sender as! UITapGestureRecognizer).view

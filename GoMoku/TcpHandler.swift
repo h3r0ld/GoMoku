@@ -26,7 +26,7 @@ class TcpHandler : NSObject, GCDAsyncSocketDelegate {
         listenSocket = GCDAsyncSocket(delegate: self, delegateQueue: socketQueue)
         
         var error : NSError?
-        
+
         let result = listenSocket.acceptOnPort(portNumber, error: &error)
         
         if(!result){
@@ -38,11 +38,14 @@ class TcpHandler : NSObject, GCDAsyncSocketDelegate {
         }
     }
     
+    // Stop listening on port
     func stopListening() {
         listenSocket.disconnect()
     }
     
+    // Connect to device(IP address)
     func connectToDevice(ip : String) {
+        
         connectedSocket = GCDAsyncSocket(delegate: self, delegateQueue: socketQueue)
         
         var error : NSError?
@@ -58,7 +61,7 @@ class TcpHandler : NSObject, GCDAsyncSocketDelegate {
         connectedSocket.disconnect();
     }
     
-    // ez hívódik meg, ha hozzánk csatlakozik valaki
+    // Called when someone connected to us
     func socket(sock: GCDAsyncSocket!, didAcceptNewSocket newSocket: GCDAsyncSocket!) {
         connectedSocket = newSocket
         
@@ -67,42 +70,43 @@ class TcpHandler : NSObject, GCDAsyncSocketDelegate {
         
         NSLog("Another device connected: %@:%d", host, port)
         
-        // a UI szálon kell ezt futtatni, mert a UI-t fogjuk macerálni
+
+        // Run it on the UI thread, because we operate with the UI
         dispatch_async(dispatch_get_main_queue(), {
             self.delegate.connected(host)
         })
         
-        // két egész számot fogunk várni
+        // We wait two integers
         let intSize : UInt = UInt(sizeof(Int)) * 2
         
-        // rögtön felkészülünk, hátha a másik küldeni fogja
+        // Prepare immediately, if the other sends
         connectedSocket.readDataToLength(intSize, withTimeout: -1, tag: 0)
     }
     
-    // ez hívódik meg, ha mi csatlakoztunk valakihez
+    // Called when we connected to someone
     func socket(sock: GCDAsyncSocket!, didConnectToHost host: String!, port: UInt16) {
         let host = connectedSocket.connectedHost()
         let port = connectedSocket.connectedPort()
         
         NSLog("Connected to device: %@:%d", host, port)
         
-        // a UI szálon kell ezt futtatni, mert a UI-t fogjuk macerálni
+        // Run it on the UI thread, because we operate with the UI
         dispatch_async(dispatch_get_main_queue(), {
             self.delegate.connected(host)
         })
         
-        // két egész számot fogunk várni
+        // We wait two integers
         let intSize : UInt = UInt(sizeof(Int)) * 2
         
-        // rögtön felkészülünk, hátha a másik küldeni fogja
+        // Prepare immediately, if the other sends
         connectedSocket.readDataToLength(intSize, withTimeout: -1, tag: 0)
     }
     
-    // ez hívódik meg, ha adatot olvastunk be
+    // Called when we read data
     func socket(sock: GCDAsyncSocket!, didReadData data: NSData!, withTag tag: Int) {
-        // az NSData-ban byte-ok vannak, ezért kicsit macerás integerré konvertálni
-        // lényegében annyit csinálunk, hogy a byte tömbből kiveszünk két integer méretű bytehalmazt
-        // és azokat az integerekbe másoljuk
+        // NSData stores bytes, so it is a bit complicated to cast it to integer
+        // So we take out two integer sized byteset from the byte array
+        // and we copy it to integers
         
         let intLength = sizeof(Int)
         
@@ -114,17 +118,17 @@ class TcpHandler : NSObject, GCDAsyncSocketDelegate {
         
         NSLog("Got two numbers: Number1: %d Number2: %d", num1, num2)
         
-        // a UI szálon kell ezt futtatni, mert a UI-t fogjuk macerálni
+        // Run it on the UI thread, because we operate with the UI
         dispatch_async(dispatch_get_main_queue(), {
             self.delegate.receivedNumbers(num1, number2: num2)
         })
         
-        // várjuk a következő adag számot
+        // We wait for the next numbers...
         let intSize : UInt = UInt(sizeof(Int)) * 2
         connectedSocket.readDataToLength(intSize, withTimeout: -1, tag: 0)
     }
     
-    // ez hívódik meg, ha megszakadt a kapcsolat
+    // Called, when disconnected
     func socketDidDisconnect(sock: GCDAsyncSocket!, withError err: NSError!) {
         if  listenSocket != nil && sock == listenSocket{
             NSLog("Stopped listening")
@@ -136,14 +140,14 @@ class TcpHandler : NSObject, GCDAsyncSocketDelegate {
             else {
                 NSLog("Disconnected. %@", err.localizedDescription)
             }
-            // a UI szálon kell ezt futtatni, mert a UI-t fogjuk macerálni
+            // Run it on the UI thread, because we operate with the UI
             dispatch_async(dispatch_get_main_queue(), {
                 self.delegate.disconnected()
             })
         }
     }
     
-    // ezt mi hívjuk, ha küldeni akarunk
+    // We call this, if we want to send numbers
     func sendNumbers(number1 : Int, number2 : Int) {
         var num1 = number1
         var num2 = number2
