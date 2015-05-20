@@ -420,7 +420,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qa5-jr-bjl">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="268"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Join a game" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfF-Ir-q5E">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Join a game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfF-Ir-q5E">
                                                 <rect key="frame" x="186" y="113" width="230" height="42"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="35"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -616,7 +616,7 @@
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="messageLabel" destination="iSf-gG-l1N" id="NJL-WM-KjB"/>
+                        <outlet property="outcomeLabel" destination="iSf-gG-l1N" id="lGH-Xs-oyh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Ph-0K-QS1" userLabel="First Responder" sceneMemberID="firstResponder"/>
